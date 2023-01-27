@@ -52,9 +52,9 @@ const Item: FunctionComponent<ICartItem> = ({
             <Image src={img} height={80} width={80} alt={`Image`} />
             <div className="mx-2 flex">
               <span className="text-sm">
-                {/* <span className="text-sm font-bold">
+                <span className="text-sm font-bold">
                   {type ? type : ""}:&nbsp;
-                </span> */}
+                </span>
                 {name}
               </span>
             </div>
