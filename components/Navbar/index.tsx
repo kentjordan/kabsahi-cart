@@ -29,7 +29,6 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex md:hidden">
-        <OpenCart />
         <HiMenuAlt4 className="mx-1 cursor-pointer" size={24} />
       </div>
     </div>

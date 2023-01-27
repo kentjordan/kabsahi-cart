@@ -14,7 +14,9 @@ const foodSlice = createSlice({
             --state.foods[food].types[variation].items[item].itemOptions[itemOptions].cartQty;
         },
         addToCart(state, action) {
-            state.cart = action.payload;
+            state.cart = [...state.cart, ...action.payload];
+            console.log(action.payload);
+
         },
         removeFromCart(state, action) {
             const filteredState = state.cart.filter((e) => e.pk !== action.payload);

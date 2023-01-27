@@ -40,22 +40,21 @@ const Item: FunctionComponent<ICartItem> = ({
         <div className="flex items-center justify-center ">
           {/* <MdEdit className="mx-2 cursor-pointer text-stone-700" /> */}
 
-          <div className="mx-1 flex items-center justify-center">
+          {/* <div className="mx-1 flex items-center justify-center">
             <IoRemove size={24} className="m-1 cursor-pointer " />
-
             <span className="rounded-sm border-2 border-stone-200 px-1">
               {quantity}
             </span>
-
             <IoAdd size={24} className="m-1 cursor-pointer text-pink-600" />
-          </div>
+          </div> */}
+
           <div className="mx-1 flex items-center">
             <Image src={img} height={80} width={80} alt={`Image`} />
             <div className="mx-2 flex">
               <span className="text-sm">
-                <span className="text-sm font-bold">
+                {/* <span className="text-sm font-bold">
                   {type ? type : ""}:&nbsp;
-                </span>
+                </span> */}
                 {name}
               </span>
             </div>

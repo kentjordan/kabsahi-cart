@@ -15,6 +15,7 @@ import FoodMenu from "@components/Food/FoodMenu";
 import { IoLocationOutline } from "react-icons/io5";
 import Kabsa from "@assets/photos/kabsa2.png";
 import Location from "@components/Location";
+import { FloatingOpenCart } from "@components/Navbar/OpenCart";
 
 export default function Home() {
   const {
@@ -32,7 +33,7 @@ export default function Home() {
       {isOpened && <FoodOptions />}
 
       <Cart />
-
+      <FloatingOpenCart />
       <div className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden bg-white">
         <div className="relative flex w-full flex-col items-center">
           <div className="absolute h-full w-full bg-gradient-to-t from-black/40 to-black/80" />

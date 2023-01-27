@@ -20,4 +20,22 @@ const OpenCart = () => {
   );
 };
 
+export const FloatingOpenCart = () => {
+  const dispatch = useDispatch();
+
+  const { cart } = useSelector((state: IStoreReducer) => state._foodReducer);
+  return (
+    <button
+      onClick={() => dispatch(openCart(true))}
+      className="fixed bottom-0 right-0 z-[50] m-4 flex h-[50px] w-[50px] flex-col items-center justify-center rounded-full bg-dominant text-white shadow md:hidden"
+    >
+      <span className="absolute top-[-12px] left-[-12px] flex h-[32px] w-[32px] items-center justify-center rounded-full bg-yellow-400 p-2 text-center shadow">
+        {cart.length}
+      </span>
+      <button className="flex items-center justify-center">
+        <IoCartOutline size={24} />
+      </button>
+    </button>
+  );
+};
 export default OpenCart;
