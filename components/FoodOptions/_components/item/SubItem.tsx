@@ -44,7 +44,7 @@ const SubItem: FunctionComponent<ISubItem> = ({
 
   return (
     <>
-      <div className="my-2 flex w-full items-center justify-start">
+      <div className="my-2 flex w-full items-center">
         <div className="mx-1 flex items-center justify-center">
           <button
             className=""

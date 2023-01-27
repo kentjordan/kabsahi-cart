@@ -7,7 +7,7 @@ interface IItem {
 
 const Item: FunctionComponent<IItem> = ({ name, children }) => {
   return (
-    <div className="m-4 flex w-auto flex-col justify-start">
+    <div className="m-4 flex w-full flex-col">
       {name && (
         <span className="m-1 p-2 text-2xl">
           {name === "Chicken" ? `🐔 Chicken` : `🐄 Beef`}

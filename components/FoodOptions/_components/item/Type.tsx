@@ -12,7 +12,7 @@ const Type: FunctionComponent<IType> = ({ name, children }) => {
         <span className="m-4 inline-block text-2xl font-bold">{name}</span>
       </div>
       <div className="relative w-full ">
-        <div className=" flex h-auto w-full flex-wrap content-start items-start justify-center overflow-x-hidden sm:justify-start">
+        <div className="flex h-auto w-full flex-wrap overflow-x-hidden ">
           {children}
         </div>
       </div>
