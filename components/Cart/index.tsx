@@ -40,6 +40,9 @@ const Cart = () => {
               <div className="flex items-center">
                 <IoCartOutline className="mx-2" size={40} />
                 <h1 className="mx-2 text-xl font-bold">My Cart</h1>
+                <span className="text-xl font-bold text-pink-700">
+                  ({foodCart.length})
+                </span>
               </div>
               <IoClose
                 className="cursor-pointer"
