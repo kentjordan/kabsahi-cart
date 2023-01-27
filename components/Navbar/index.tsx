@@ -2,10 +2,11 @@ import Link from "next/link";
 import React from "react";
 import OpenCart from "./OpenCart";
 import Favorites from "./Favorites";
+import { HiMenuAlt4 } from "react-icons/hi";
 
 const Navbar = () => {
   return (
-    <div className="flex h-[56px] w-full items-center justify-between border-b border-stone-300 bg-white px-4 text-sm md:px-8 lg:px-12">
+    <div className="absolute z-10 flex h-[56px] w-full items-center justify-between  p-8 text-sm text-white md:px-8 lg:px-12">
       <h1 className="font-bold">Kabashi - Commonwealth</h1>
       <div className="hidden items-center md:flex">
         <ul className="flex text-center ">
@@ -26,6 +27,10 @@ const Navbar = () => {
           <Favorites />
           <OpenCart />
         </div>
+      </div>
+      <div className="flex md:hidden">
+        <OpenCart />
+        <HiMenuAlt4 className=" cursor-pointer" size={24} />
       </div>
     </div>
   );

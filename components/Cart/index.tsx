@@ -33,7 +33,7 @@ const Cart = () => {
           initial={{ x: 500 }}
           transition={{ ease: "anticipate", duration: 0.25 }}
           animate={{ x: 0 }}
-          className="fixed right-0 z-10 flex h-screen w-[450px] min-w-[320px] flex-col justify-between overflow-hidden border-l-2 border-stone-200 bg-white shadow"
+          className="fixed right-0 z-50 flex h-screen w-[450px] min-w-[320px] flex-col justify-between overflow-hidden border-l-2 border-stone-200 bg-white shadow"
         >
           <div className="h-[56px] w-full border-b border-stone-300 p-2">
             <div className="flex items-center justify-between">

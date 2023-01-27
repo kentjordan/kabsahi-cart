@@ -35,10 +35,10 @@ const FoodBanner = () => {
         {foodName}
       </h1>
       <div className="flex w-full justify-center">
-        <Image src={img} height={275} width={275} alt="Biryani" />
-        <Image src={img} height={275} width={275} alt="Biryani" />
-        <Image src={img} height={275} width={275} alt="Biryani" />
-        <Image src={img} height={275} width={275} alt="Biryani" />
+        <Image src={img} height={180} width={180} alt="Biryani" />
+        <Image src={img} height={180} width={180} alt="Biryani" />
+        <Image src={img} height={180} width={180} alt="Biryani" />
+        <Image src={img} height={180} width={180} alt="Biryani" />
       </div>
     </div>
   );

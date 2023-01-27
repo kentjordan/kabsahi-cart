@@ -14,7 +14,7 @@ const FoodOptions = () => {
       initial={{ opacity: 0 }}
       transition={{ ease: "anticipate", duration: 0.25 }}
       animate={{ opacity: 1 }}
-      className="fixed z-20 flex h-screen w-full items-center justify-center overflow-hidden bg-black/60 md:p-2"
+      className="fixed z-40 flex h-screen w-full items-center justify-center overflow-hidden bg-black/60 md:p-2"
     >
       <motion.div
         initial={{ y: 1000 }}

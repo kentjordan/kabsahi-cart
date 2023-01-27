@@ -11,14 +11,19 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full bg-dominant px-8 py-4 text-white">
-      <div className="m-4 flex h-[30%] items-center justify-between  border-b border-stone-300 px-4 py-8">
+    <div className="w-full bg-dominant py-4 text-white">
+      <div className="m-4 flex h-[30%] flex-wrap  items-center justify-center border-b border-stone-300 px-4 py-8 md:justify-between">
         {/* <span className="fon">Kabsahi</span> */}
-        <Image src={KabsahiLogo} alt="Kabsahi Logo" width={150} />
-        <div className="flex">
-          <IoLogoFacebook size={24} className="mx-1 cursor-pointer " />
-          <IoLogoInstagram size={24} className="mx-1 cursor-pointer " />
-          <IoLogoYoutube size={24} className="mx-1 cursor-pointer " />
+        <Image
+          src={KabsahiLogo}
+          className="mx-8 mt-[-8px]"
+          alt="Kabsahi Logo"
+          width={150}
+        />
+        <div className="my-8 flex">
+          <IoLogoFacebook size={24} className="mx-2 cursor-pointer " />
+          <IoLogoInstagram size={24} className="mx-2 cursor-pointer " />
+          <IoLogoYoutube size={24} className="mx-2 cursor-pointer " />
         </div>
       </div>
       <div className="flex w-full flex-wrap justify-center py-4">

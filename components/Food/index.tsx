@@ -20,7 +20,7 @@ const Food: FunctionComponent<{
           })
         )
       }
-      className="relative mx-2 my-6 flex h-[120px] w-[120px] cursor-pointer flex-col items-center justify-end rounded-lg border-2 border-stone-300 bg-white p-3 shadow"
+      className="relative mx-4 my-6 flex h-[120px] w-[120px] cursor-pointer flex-col items-center justify-end rounded-lg border border-stone-300 bg-white p-3"
     >
       {name && img ? (
         <>

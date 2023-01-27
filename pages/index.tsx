@@ -10,10 +10,14 @@ import FoodOptions from "@components/FoodOptions";
 
 import { useDispatch, useSelector } from "react-redux";
 import IStoreReducer from "@redux/IStoreReducer";
+import BestSellers from "@components/Food/BestSellers";
+import FoodMenu from "@components/Food/FoodMenu";
+import { IoLocationOutline } from "react-icons/io5";
+import Kabsa from "@assets/photos/kabsa2.png";
+import Location from "@components/Location";
 
 export default function Home() {
   const {
-    foods,
     foodOptions: { isOpened },
   } = useSelector((state: IStoreReducer) => state._foodReducer);
 
@@ -26,63 +30,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isOpened && <FoodOptions />}
-      <div className="relative flex min-h-screen flex-col justify-start overflow-hidden bg-white">
-        <Navbar />
-        <Cart />
 
-        <div className="my-8 flex flex-col items-center">
-          <div className="flex justify-center px-2">
-            <Image src={KabsahiCover} alt="Kabsahi Cover" width={600}></Image>
+      <Cart />
+
+      <div className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden bg-white">
+        <div className="relative flex w-full flex-col items-center">
+          <div className="absolute h-full w-full bg-gradient-to-t from-black/40 to-black/80" />
+          <Image src={Kabsa} alt="" className="w-full min-w-[1300px]" />
+          <Navbar />
+          <div className="absolute bottom-[-150px] flex h-full w-full items-end justify-center p-2 sm:bottom-[-100px]">
+            <Location />
           </div>
-          <div className="my-8">
-            {/* <div className="my-4">
-              <h1 className="mx-4 my-8 text-2xl font-bold">Best Sellers 😊</h1>
-              <div className="flex max-w-[820px] flex-wrap items-center justify-center">
-                <Food
-                  name="Chicken Kabsa (Budget Meal)"
-                  img={v2.KabsaBudgetMeal}
-                />
-                <Food name="Shawarma Wraps" img={v2.Shawarma} />
-                <Food name="Sambousak" img={v2.Sambousak} />
-                <Food name="Broasted Series" img={v2.BroastedChicken} />
-              </div>
-            </div> */}
-            <div className="my-4">
-              <h1 className="mx-4 my-8 text-xl font-bold">Food Menu 🍴</h1>
-              <div className="flex max-w-[820px] flex-wrap items-center justify-center">
-                {foods.map((e, i) => {
-                  return (
-                    <Food
-                      key={i}
-                      name={e.foodName}
-                      code={e.foodCode}
-                      img={e.img}
-                    />
-                  );
-                })}
-                {foods.map((e, i) => {
-                  return (
-                    <Food
-                      key={i}
-                      name={e.foodName}
-                      code={e.foodCode}
-                      img={e.img}
-                    />
-                  );
-                })}
-                {/* <Food name="Biryani Series" img={v2.Baryani} />
-                <Food name="Broasted Series" img={v2.BroastedChicken} />
-                <Food
-                  name="Chicken Kabsa (Budget Meal)"
-                  img={v2.KabsaBudgetMeal}
-                />
-                <Food name="Kabsa Platter" img={v2.KabsahiPlatter} />
-                <Food name="Sambousak" img={v2.Sambousak} />
-                <Food name="Shawarma Rice" img={v2.ShawarmaRice} />
-                <Food name="Shawarma Wraps" img={v2.Shawarma} />
-                <Food /> */}
-              </div>
-            </div>
+        </div>
+        <div className="h-[200px] sm:h-[150px]"></div>
+        <div className="z-20 flex w-full flex-col items-center justify-center">
+          <BestSellers />
+          <div className="my-6"></div>
+          <FoodMenu />
+          <hr />
+
+          <div className="m-12 flex flex-col justify-center">
+            {/* <span className=" mx-4 my-8 text-center text-xl font-bold text-dominant">
+              OPEN FOR FRANCHISE
+            </span> */}
+            <Image src={KabsahiCover} alt="Kabsahi Cover" width={600}></Image>
           </div>
         </div>
       </div>
