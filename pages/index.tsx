@@ -1,18 +1,15 @@
 import Head from "next/head";
 import Cart from "../components/Cart";
 import Navbar from "@components/Navbar";
-import Food from "@components/Food";
-import { v2 } from "@assets/photos/foods";
 import KabsahiCover from "@assets/kabsahi-cover.png";
 import Image from "next/image";
 import Footer from "@components/Footer";
 import FoodOptions from "@components/FoodOptions";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import IStoreReducer from "@redux/IStoreReducer";
 import BestSellers from "@components/Food/BestSellers";
 import FoodMenu from "@components/Food/FoodMenu";
-import { IoLocationOutline } from "react-icons/io5";
 import Kabsa from "@assets/photos/kabsa2.png";
 import Location from "@components/Location";
 import { FloatingOpenCart } from "@components/Navbar/OpenCart";
@@ -31,7 +28,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isOpened && <FoodOptions />}
-
       <Cart />
       <FloatingOpenCart />
       <div className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden bg-white">
@@ -49,7 +45,6 @@ export default function Home() {
           <div className="my-6"></div>
           <FoodMenu />
           <hr />
-
           <div className="m-12 flex flex-col justify-center">
             {/* <span className=" mx-4 my-8 text-center text-xl font-bold text-dominant">
               OPEN FOR FRANCHISE
