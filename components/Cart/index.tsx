@@ -15,16 +15,13 @@ interface IFoodCart extends IFoodItemOptions {
 
 const Cart = () => {
   const dispatch = useDispatch();
+
   const { _cartReducer, _foodReducer } = useSelector(
     (state: IStoreReducer) => state
   );
   const foodCart: Array<IFoodCart> = _foodReducer.cart;
 
-  let subTotal = 0;
-
-  for (let i = 0; i < foodCart.length; i++) {
-    subTotal += foodCart[i].price;
-  }
+  let subTotal = foodCart.map((e, i) => e.price).reduce((p, c) => p + c, 0);
 
   return (
     <>
