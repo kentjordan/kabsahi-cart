@@ -2,7 +2,6 @@ import React, { FunctionComponent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart as addToCartAction } from "@redux/slices/foods/foods";
 import IStoreReducer from "@redux/IStoreReducer";
-import { IFood } from "@redux/slices/foods/types";
 import addToCart from "../utils/addToCart";
 
 const AddToCart = () => {

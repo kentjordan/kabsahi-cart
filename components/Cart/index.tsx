@@ -30,7 +30,7 @@ const Cart = () => {
           initial={{ x: 500 }}
           transition={{ ease: "anticipate", duration: 0.25 }}
           animate={{ x: 0 }}
-          className="fixed right-0 z-50 flex h-screen min-w-[300px] flex-col justify-between overflow-hidden border-l-2 border-stone-200 bg-white shadow"
+          className="fixed right-0 z-50 flex h-screen w-[500px] flex-col justify-between overflow-hidden border-l-2 border-stone-200 bg-white shadow"
         >
           <div className="h-[56px] w-full border-b border-stone-300 p-2">
             <div className="flex items-center justify-between">
@@ -54,13 +54,11 @@ const Cart = () => {
             {foodCart.length <= 0 ? (
               <>
                 <div className="flex h-full w-full flex-col items-center justify-center text-center ">
-                  <span className="my-1 text-2xl font-bold">
-                    Cart is empty ☹️
-                  </span>
-                  <span className="my-1">
+                  <span className="my-1 text-2xl font-bold">Cart is empty</span>
+                  <span className="my-1 w-[24ch] text-stone-500">
                     Login to view your cart and start ordering
                   </span>
-                  <button className="my-4 rounded bg-dominant py-2 px-4 font-bold text-white shadow">
+                  <button className="my-8 rounded bg-dominant py-2 px-4 font-bold text-white shadow">
                     LOGIN / SIGN UP
                   </button>
                 </div>

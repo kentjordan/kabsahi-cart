@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import FoodsInitialStates from "./state";
 
+const localCart: Array<any> = [];
+
 const foodSlice = createSlice({
     name: 'Foods',
     initialState: FoodsInitialStates,
@@ -15,8 +17,8 @@ const foodSlice = createSlice({
         },
         addToCart(state, action) {
             state.cart = [...state.cart, ...action.payload];
-            console.log(action.payload);
-
+            localCart.push(action.payload);
+            console.log(action.payload[0].pk)
         },
         removeFromCart(state, action) {
             const filteredState = state.cart.filter((e) => e.pk !== action.payload);
